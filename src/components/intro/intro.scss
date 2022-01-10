@@ -1,3 +1,106 @@
  .intro {
-     background-color: lightpink;
+     display: flex;
+     background-color: white;
+
+     .left {
+        flex: 0.5;
+        overflow: hidden;
+
+        .image {
+            display: flex;
+            width: 845px;
+            height: 845px;
+            background-color: crimson;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            float: right;
+
+            img {
+                height: 90%;
+            }
+        }
+     }
+
+     .right {
+         position: relative;
+        flex: 0.5;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%; 
+            height: 100%;
+            padding-left: 50px;
+            justify-content: center;
+
+            h1 {
+                font-size: 60px;
+                margin: 10px 0;
+            }
+
+            h2 {
+                font-size: 35px;
+            }
+
+            h3 {
+                font-size: 30px;
+
+                span {
+                    font-size: inherit;
+                    color: crimson;
+                }
+
+                .ityped-cursor {
+                    -webkit-animation: blink 1s infinite;
+                    -moz-animation: blink 1s infinite;
+                    animation: blink 1s infinite;
+                }
+
+                @keyframes blink {
+                    50% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 0;
+                    }
+                }
+                 
+                @-webkit-keyframes blink {
+                    50% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 0;
+                    }
+                }
+                 
+                @-moz-keyframes blink {
+                    50% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        a {
+            position: absolute;
+            bottom: 10px;
+            left: 40%;
+
+            img {
+                width: 30px;
+                animation: arrowBlink 2s infinite;
+            }
+
+            @keyframes arrowBlink {
+                100% {
+                    opacity: 0;
+                }
+            }
+        }
+     }
  }
